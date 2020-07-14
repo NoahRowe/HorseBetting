@@ -1,0 +1,77 @@
+Done:
+- Did a quick data analysis
+- Removed uncommon races and distance and venue combos
+- Set all lengths_behind times > 70 to the average loser value
+- Added num of horses in a race
+- Added horse win percent
+- Added trainer win percent
+- Added raw speed ratings
+- Added track variant
+- Added speed ratings
+- Add win percent for jockey
+- Emailed Charles
+- Added normalized results for trainer, jockey, horse
+- Added trainer jockey relationship
+- Added going rating
+
+Next Steps:
+- 
+
+- Look at the engineering analysis
+    - Find the distances to the posts
+    
+    
+Email to charles:
+- Mention that I have listened to both podcasts
+    - Very interesting to hear from ppl that do this professionally + academically
+    - Interesting bc maybe I will see myself there one day
+    - Found the academic particularly interesting
+    
+- Seem to imply that it is a very hard thing to get postitive ROI on. Especially because I have no exotic bets in my data
+- Mention my goal for this project, ask him what he thinks a reasonable goal for results is
+    
+- Explain how to take into account odds / ask how I should use them
+- Mention I have tried other scaling methods that seem to be worse then the one I am using
+    
+Things to think about:
+- outliers in the data
+    - Remove based on uncommon race class
+    - Remove horses that do not finish (999 lengths behind)
+
+
+From the paper:
+
+- Target -> lengths behind winner
+
+FEATURES: 
+
+- Median Speed figure relative to others in the race (continuous) - Not rel
+
+- Recent Speed figure relative… (continuous) - Not rel
+
+- Last 100m speed figure relative… (continuous)
+
+- Best Distance & Surface speed figure relative… (continuous) - Not rel
+
+- Jockey Weight relative… (continuous) - Not rel
+
+- Horse Optimum Weight relative… (continuous) - No idea need to research
+
+- Handicap Rating relative… (continuous) - not rel
+
+- Jockey Win % (continuous) - DONE 
+
+- Trainer Win % (continuous) - DONE
+
+- Barrier Win % at distance (ordinal)  - DONE
+
+- Change of Equipment (nominal) - DONE
+
+- Days since Last Race (continuous) - DONE
+
+- Trouble in past run (text — ordinal) - NONE
+
+
+
+
+
