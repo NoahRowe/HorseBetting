@@ -9,7 +9,8 @@ Data was sourced from *Horse Racing in HK*, a Kaggle dataset found at: https://w
 ## Data Cleaning
 Due to the refined nature of the downloaded dataset from Kaggle, very little data cleaning was required. The main goal of this phase of the project was to remove outlying data that would impact speed rating calculations and outlier target values. This was performed in /Data/CleanData.ipynb. 
 
-The first step was to  the input features used in speed rating calculations were 
+The first step was to count the various occuracnes of the different race catagories accounted for in the speed rating calculations: venue, distance, and class. 
+
 
 ## Feature Engineering
 
@@ -20,3 +21,4 @@ The first step was to  the input features used in speed rating calculations were
 ## Results
 
 ## Reflection and Next Steps
+
