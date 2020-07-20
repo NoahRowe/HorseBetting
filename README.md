@@ -11,6 +11,7 @@ Due to the refined nature of the downloaded dataset from Kaggle, very little dat
 
 The first step was to count the various occuracnes of the different race catagories accounted for in the speed rating calculations: venue, distance, and class. 
 
+![alt text](https://github.com/NoahRowe/HorseBetting/blob/master/Data/venue_counts.png?raw=true)
 
 ## Feature Engineering
 
