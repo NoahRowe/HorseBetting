@@ -12,8 +12,20 @@ Due to the refined nature of the downloaded dataset from Kaggle, very little dat
 The first step was to count the various occuracnes of the different race catagories accounted for in the speed rating calculations: venue, distance, and class. 
 
 ![alt text](https://github.com/NoahRowe/HorseBetting/blob/master/Data/venue_counts.png?raw=true)
+![alt text](https://github.com/NoahRowe/HorseBetting/blob/master/Data/class_counts.png?raw=true)
+![alt text](https://github.com/NoahRowe/HorseBetting/blob/master/Data/distance_counts.png?raw=true)
+
+Races were removed from the dataset based on the frequency of that type of race. For example, races at HV at a distance of 2200 were very uncommon, so they were excluded. Also, as one of my predictive models used lengths behind as a target, this feature had to be cleaned. The issue was that if a horse did not finish a race, it was assigned a final lengths behind value of 999. For these runs, lenghts behind was replaced with the average lengths behind of all last place horses. 
 
 ## Feature Engineering
+Many features were experimented with throughout the course of this model. See the **adding_features** directory for the full code. The final features chosen for the model are as follows:
+* gear_change: 1 if the horse is running with different gear than its last race, 0 if not
+* horse_rating_rel: the rating assiged to the horse by the Hong-Kong Jockey Club, relative to other horses in the race
+* last_speed_rating_rel: the calculated speed rating for the horses last run, relative to other horses in the race
+* average_speed_rating_rel: avgerage calculated speed rating for this horses past runs, relative to other horses in the race
+* best_surface_distance_rel: the best speed rating acheived by this horse on this surface and at this distance, relative to other horses in the race
+* weight_rating_rel: predicted speed rating based on running weight, derrived from a linear regression based on previous speed rating and weight values, relative to other horses in the race
+* rest_rating_rel:
 
 ## Preditive Model
 
