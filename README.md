@@ -20,21 +20,31 @@ Races were removed from the dataset based on the frequency of that type of race.
 ## Feature Engineering
 Many features were experimented with throughout the course of this model. See the **adding_features** directory for the full code. The final features chosen for the model are as follows:
 * gear change: 1 if the horse is running with different gear than its last race, 0 if not
-* horse_rating_rel: the rating assiged to the horse by the Hong-Kong Jockey Club, relative to other horses in the race
-* last speed rating_rel: the calculated speed rating for the horses last run, relative to other horses in the race
-* average speed rating relative: avgerage calculated speed rating for this horses past runs, relative to other horses in the race
-* best surface distance relative: the best speed rating acheived by this horse on this surface and at this distance, relative to other horses in the race
-* weight rating relative: predicted speed rating based on running weight, derrived from a linear regression based on previous speed ratings and weight values, relative to other horses in the race
-* rest rating relative: predicted speed rating based on time since last run, derrived from a linear regression based on previous speed ratings and rest values. 
-* going rating relative: average speed rating on this going type, relative to other horses in the race
+* horse rating: the rating assiged to the horse by the Hong-Kong Jockey Club, relative to other horses in the race
+* last speed rating: the calculated speed rating for the horses last run, relative to other horses in the race
+* average speed rating: avgerage calculated speed rating for this horses past runs, relative to other horses in the race
+* best surface distance: the best speed rating acheived by this horse on this surface and at this distance, relative to other horses in the race
+* weight rating: predicted speed rating based on running weight, derrived from a linear regression based on previous speed ratings and weight values, relative to other horses in the race
+* rest rating: predicted speed rating based on time since last run, derrived from a linear regression based on previous speed ratings and rest values. 
+* going rating: average speed rating on this going type, relative to other horses in the race
 * jockey, trainer, horse win_percent: percent of races won by jockey, trainer, and horse, relative to other runners in the race
-* jockey, trainer, horse normalized record relative: average of past finishes divided by number of horses in each race, relative to other horses in the race
-* trainer-jockey recored relative: record with this combination of trainer and jockey, relative to other horses in the race
+* jockey, trainer, horse normalized record: average of past finishes divided by number of horses in each race, relative to other horses in the race
+* trainer-jockey recored: record with this combination of trainer and jockey, relative to other horses in the race
 * draw win percent: the win percentage of horses running at this post position
-* average 
+* average section 1 speed rating: the average speed rating for the first section of the race for this horse, relative to other horses in the race
+* last section 1 speed rating: the speed rating for this horses last run over the first section of the race, relative to other horses in the race
+* average last section speed rating: the average speed rating for this horse over the last section of the race, relative to other horses in the race
+* last last section speed rating: the speed rating for this horse over the last section of its most recent race, relative to other horses in the race
+* average speed rating ratio,: the average of the ratio of first section speed rating to last section speed rating for each race, relative to other horses in the race
+* last speed rating ratio: the ratio of first section speed rating to last section speed rating for this horses most recent run, relative to other horses in the race
+
+Most features were scaled relative to the statistics of the other horses in this race. Scaling was done using sklearn.preprocessing.StandardScalar (this was found to return better results than min-max or robust scaling functions). 
+
 ## Preditive Model
+Initially, many different machine learning models were experimented with the goal of finding the best one to improve results. However, it was soon discovered that the best way to boost results was to focus on data cleaning, feature engineering, and target selection. Based on the Charles Spenser article mentioned above, I attempted to determine the relationship between lengths behind winner and implied probability of winning. I was looking to use a regression model, rather than classification, due to the extra information that could be gleaned from a continious variable output. However, I soon came to realize that a more simplistic solution would be to use the predict_proba method from the logistic regression model. This allowed for the prediction of a discrete variable (won or not) and to see the predicted probability that the prediction is true. A logisitc regression model was also useful because of its speed and the easy comprehension of having won or not as the target variable. 
 
 ## Betting Model
+Various betting models were 
 
 ## Results
 
