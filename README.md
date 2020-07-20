@@ -19,14 +19,19 @@ Races were removed from the dataset based on the frequency of that type of race.
 
 ## Feature Engineering
 Many features were experimented with throughout the course of this model. See the **adding_features** directory for the full code. The final features chosen for the model are as follows:
-* gear_change: 1 if the horse is running with different gear than its last race, 0 if not
+* gear change: 1 if the horse is running with different gear than its last race, 0 if not
 * horse_rating_rel: the rating assiged to the horse by the Hong-Kong Jockey Club, relative to other horses in the race
-* last_speed_rating_rel: the calculated speed rating for the horses last run, relative to other horses in the race
-* average_speed_rating_rel: avgerage calculated speed rating for this horses past runs, relative to other horses in the race
-* best_surface_distance_rel: the best speed rating acheived by this horse on this surface and at this distance, relative to other horses in the race
-* weight_rating_rel: predicted speed rating based on running weight, derrived from a linear regression based on previous speed rating and weight values, relative to other horses in the race
-* rest_rating_rel:
-
+* last speed rating_rel: the calculated speed rating for the horses last run, relative to other horses in the race
+* average speed rating relative: avgerage calculated speed rating for this horses past runs, relative to other horses in the race
+* best surface distance relative: the best speed rating acheived by this horse on this surface and at this distance, relative to other horses in the race
+* weight rating relative: predicted speed rating based on running weight, derrived from a linear regression based on previous speed ratings and weight values, relative to other horses in the race
+* rest rating relative: predicted speed rating based on time since last run, derrived from a linear regression based on previous speed ratings and rest values. 
+* going rating relative: average speed rating on this going type, relative to other horses in the race
+* jockey, trainer, horse win_percent: percent of races won by jockey, trainer, and horse, relative to other runners in the race
+* jockey, trainer, horse normalized record relative: average of past finishes divided by number of horses in each race, relative to other horses in the race
+* trainer-jockey recored relative: record with this combination of trainer and jockey, relative to other horses in the race
+* draw win percent: the win percentage of horses running at this post position
+* average 
 ## Preditive Model
 
 ## Betting Model
