@@ -50,7 +50,3 @@ A useful way to account for odds in a betting model is to filter the bets you sh
 
 ## Results
 In the end I was unable to generate positive returns from my model. I think that this is due to the exceptional efficency of the Hong-Kong horse racing market, and believe that I would have had more success in a less intense market. The image below is a cross validation run of 6 models on my testing dataset, using a odds-based filter (mentioned above) and Kelly's Criterion. 
-
-
-## Reflection and Next Steps
-
